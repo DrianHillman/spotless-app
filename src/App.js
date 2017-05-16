@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo';
+import Main from './components/Main.js' ;
 
 class App extends Component {
+  
+  createClient() {
+    // Initialize Apollo Client with URL to our server
+    return new ApolloClient({
+      networkInterface: createNetworkInterface({
+        uri: 'https://spotless-api.herokuapp.com/graphql',
+      }),
+    });
+  }
+  
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          Spotless App<br/>To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <ApolloProvider client={this.createClient()}>
+        <Main />
+      </ApolloProvider>
     );
   }
 }
