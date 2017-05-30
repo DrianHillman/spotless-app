@@ -6,15 +6,18 @@ import { graphql, gql } from 'react-apollo';
 class Main extends Component {
   
   render() { 
+    const {allPlaylists} = this.props.data;
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          Spotless App<br/>To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ul>
+          {allPlaylists !== undefined ? allPlaylists.map((playlist) => (
+           <li key={playlist.id}> {playlist.title} </li>
+          )) : <p>...Loading</p>}
+        </ul>
       </div>
     );
   }
