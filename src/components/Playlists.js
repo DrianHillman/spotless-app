@@ -3,10 +3,11 @@ import logo from '../logo.svg';
 import '../App.css';
 import { graphql, gql } from 'react-apollo';
 
-class Main extends Component {
+class Playlists extends Component {
   
   render() { 
     const {allPlaylists} = this.props.data;
+    
     return (
       <div className="App">
         <div className="App-header">
@@ -23,12 +24,13 @@ class Main extends Component {
   }
 }
 
-const EnhancedMainWithData = graphql(gql`
+const EnhancedPlaylistsWithData = graphql(gql`
   query{
     allPlaylists{
       title
       id
     }
   }
-`)(Main);
-export default EnhancedMainWithData;
+`)(Playlists);
+
+export default EnhancedPlaylistsWithData;
