@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 export const AUTH_CONFIG = {
-  domain: '{process.env.DOMAIN}',
-  clientId: '{process.env.CLIENT_ID}',
-  callbackUrl: 'http://localhost:3000/callback'
+  domain: 'drianhillman.auth0.com',
+  clientId: '9KDERGpPKX7ltbKe1NX4s1Jnp8EBJ7FH',
+  callbackUrl: 'https://bloc-projects-drianhillman.c9users.io/'
 };

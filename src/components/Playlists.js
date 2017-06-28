@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../App.css';
 import { graphql, gql } from 'react-apollo';
 
@@ -9,17 +8,14 @@ class Playlists extends Component {
     const {allPlaylists} = this.props.data;
     
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <ul>
+      <section>
+        <h1>My Playlists</h1>
+        <ul className="playlists">
           {allPlaylists !== undefined ? allPlaylists.map((playlist) => (
            <li key={playlist.id}> {playlist.title} </li>
           )) : <p>...Loading</p>}
         </ul>
-      </div>
+      </section>
     );
   }
 }

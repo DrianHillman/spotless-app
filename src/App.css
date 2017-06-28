@@ -1,5 +1,12 @@
 .App {
-  text-align: center;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: black;
+}
+
+.Nav{
+  padding: 16px;
+  background-color: #222;
+  color: white;
 }
 
 .App-logo {
@@ -8,9 +15,10 @@
 }
 
 .App-header {
+  text-align: center;
   background-color: #222;
-  height: 150px;
-  padding: 20px;
+  min-height: 150px;
+  padding: 0 0 20px;
   color: white;
 }
 
@@ -21,4 +29,33 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.App h1{
+  font-size: 32px;
+  margin: 80px 0 0 80px;
+  color: #9e9e9e;
+  text-transform: uppercase;
+}
+
+.playlists{
+  margin: 4px 0 0 80px;
+  padding: 0;
+  font-size: 20px;
+}
+
+.playlists li{
+  font-size: 1em;
+  font-weight: bold;
+  list-style: none;
+  padding: 2px;
+}
+
+a{
+  cursor: pointer;
+  padding: 0 2px 2px;
+}
+
+a:hover{
+  border-bottom: 1px solid white;
 }
