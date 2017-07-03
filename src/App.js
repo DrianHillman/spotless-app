@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from './logo.svg';
+import spotless_icon from './img/spotless-icon.svg'
+import banner from './img/app-banner.png'
 import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo';
 import Playlists from './components/Playlists.js';
 
@@ -32,12 +33,12 @@ class App extends Component {
     return (
       <div className="App">
           <div className="Nav">
-            <a onClick={this.goTo.bind(this, 'home')}>Home</a> |&nbsp; 
+            <a onClick={this.goTo.bind(this, 'home')}>Home</a> &bull;&nbsp; 
   
             {
               !isAuthenticated() && (
                   <a onClick={this.login.bind(this)}>
-                   Log In
+                   Login / Signup
                   </a>
                 )
             }
@@ -48,11 +49,11 @@ class App extends Component {
                   </a>
                 )
             }
+            <span className="wordmark"><img className="spotless-icon" src={spotless_icon} alt="app icon" />Spotless App</span>
           </div>
         
           <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Welcome to React</h2>
+            <img src={banner} alt="spotless banner" className="app-banner" />
           </div>
 
         <ApolloProvider client={this.createClient()}>

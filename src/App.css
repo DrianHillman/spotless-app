@@ -1,12 +1,17 @@
+body{
+  background-color: #fafafa;
+}
+
 .App {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: black;
+  color: #1c1c1c;
 }
 
 .Nav{
   padding: 16px;
-  background-color: #222;
-  color: white;
+  border-bottom: 1px solid #cecece;
+  color: #1c1c1c;
+  font-weight: bold;
 }
 
 .App-logo {
@@ -14,27 +19,25 @@
   height: 80px;
 }
 
-.App-header {
-  text-align: center;
-  background-color: #222;
-  min-height: 150px;
-  padding: 0 0 20px;
-  color: white;
+.spotless-icon{
+  width: 20px;
+  -ms-transform: translateY(1px); /* IE 9 */
+  -webkit-transform: translateY(1px); /* Safari */
+  transform: translateY(1px);
 }
 
-.App-intro {
-  font-size: large;
+.app-banner{
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.wordmark{
+  float: right;
 }
 
 .App h1{
-  font-size: 32px;
-  margin: 80px 0 0 80px;
-  color: #9e9e9e;
+  font-size: 28px;
+  margin: 40px 0 0 80px;
+  color: #cecece;
   text-transform: uppercase;
 }
 
@@ -57,5 +60,5 @@ a{
 }
 
 a:hover{
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #1c1c1c;
 }
