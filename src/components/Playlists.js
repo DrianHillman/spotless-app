@@ -1,23 +1,37 @@
 import React, { Component } from 'react';
-import '../App.css';
 import { graphql, gql } from 'react-apollo';
-// import styled from 'styled-components';
-
-// const Button = styled.button``;
+import styled from 'styled-components';
 
 class Playlists extends Component {
   
   render() { 
     const {allPlaylists} = this.props.data;
+    const SectionTitle = styled.h1`
+      font-size: 28px;
+      margin: 40px 0 0 80px;
+      color: #cecece;
+      text-transform: uppercase;
+    `;
+    const List = styled.ul`
+      margin: 4px 0 0 80px;
+      padding: 0;
+      font-size: 20px;
+    `;
+    const Item = styled.li`
+      font-size: 1em;
+      font-weight: bold;
+      list-style: none;
+      padding: 2px;
+    `;
     
     return (
       <section>
-        <h1>My Playlists</h1>
-        <ul className="playlists">
+        <SectionTitle>My Playlists</SectionTitle>
+        <List>
           {allPlaylists !== undefined ? allPlaylists.map((playlist) => (
-           <li key={playlist.id}> {playlist.title} </li>
+           <Item key={playlist.id}> {playlist.title} </Item>
           )) : <p>...Loading</p>}
-        </ul>
+        </List>
       </section>
     );
   }
