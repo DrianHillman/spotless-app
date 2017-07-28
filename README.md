@@ -1,4 +1,4 @@
-<h4 align="center"> 🚧 WIP | Construction 🚧</h4>
+<h3 align="center"> 🚧 WIP | Construction 🚧</h3>
 
 # Spotless
 > A front-end application utilizing React, GraphQL, Apollo, Styled Components, and the Spotify API.
