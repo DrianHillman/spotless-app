@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import banner from './img/app-banner.png'
+import banner from './img/app-banner@2x.png'
 import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo';
 import Playlists from './components/Playlists.js';
 
