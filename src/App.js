@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import banner from './img/app-banner@2x.png'
 import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo';
 import Playlists from './components/Playlists.js';
+import Footer from './components/Footer.js';
 
 class App extends Component {
   createClient() {
@@ -29,7 +30,7 @@ class App extends Component {
   render() {
     const { isAuthenticated } = this.props.auth;
     const App = styled.div`
-      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
       color: #1c1c1c;
       margin: 0;
       padding: 0;
@@ -105,6 +106,8 @@ class App extends Component {
         <ApolloProvider client={this.createClient()}>
           <Playlists />
         </ApolloProvider>
+
+        <Footer />
       </App>
     );
   }
