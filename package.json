@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "auth0-js": "^8.7.0",
+    "auth0-js": "^9.3.0",
     "history": "^4.6.2",
     "material-design-icons": "^3.0.1",
     "react": "^15.5.4",
